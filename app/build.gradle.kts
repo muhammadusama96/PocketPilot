@@ -12,8 +12,8 @@ android {
         applicationId = "com.pocketpilot.app"
         minSdk = 27
         targetSdk = 34
-        versionCode = 2
-        versionName = "0.1.1"
+        versionCode = 4
+        versionName = "0.1.3"
     }
 
     buildTypes {
@@ -45,14 +45,10 @@ dependencies {
     implementation("androidx.activity:activity-ktx:1.9.2")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.6")
 
-    // On-device OCR for screens the accessibility tree cannot see (WebView, canvas).
-    implementation("com.google.mlkit:text-recognition:16.0.1")
-
-    // Encrypted local database for memory (Room + SQLCipher).
-    implementation("androidx.room:room-runtime:2.6.1")
-    implementation("androidx.room:room-ktx:2.6.1")
-    implementation("net.zetetic:android-database-sqlcipher:4.5.4")
-    ksp("androidx.room:room-compiler:2.6.1")
+    // NOTE (v0.1.2): ML Kit text-recognition and Room/SQLCipher were removed.
+    // No app code ever called them (only a stub interface name mentions ML
+    // Kit); their providers and native libs only added launch risk on Honor
+    // phones. OCR and encrypted storage can return as opt-in modules later.
 
     // --- Experimental 2026 integrations (add when building with the SDK) ---
     // Google ADK for Android (agent loop, v0.1.0, May 2026) — see docs/FEATURES.md.
