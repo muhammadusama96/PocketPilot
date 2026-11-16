@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PocketPilot</string>
+    <string name="app_tagline">Your phone, piloted by you. On-device first, no account required.</string>
+    <string name="settings_title">Settings</string>
+    <string name="enable_accessibility">Enable accessibility service</string>
+    <string name="start_pilot">Start Pilot</string>
+    <string name="accessibility_service_description">PocketPilot reads the screen and taps, types and swipes on your behalf, only when you ask it to. It never sends your screen anywhere unless you choose a cloud model.</string>
+</resources>
