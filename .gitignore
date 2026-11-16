@@ -1,0 +1,11 @@
+*.iml
+.gradle/
+local.properties
+build/
+out/
+.idea/
+*.apk
+*.aab
+models/
+*.litertlm
+*.gguf
